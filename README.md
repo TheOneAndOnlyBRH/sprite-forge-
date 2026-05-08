@@ -41,7 +41,7 @@ Standard AI image generation is stochastic and often loses character detail betw
 nom install
 
 ```
-###Start the development server:
+### Start the development server:
 
 ```
 npm run dev
