@@ -1,0 +1,102 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-panel: var(--panel);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Dark zinc-900 base with indigo/purple accents */
+  --background: oklch(0.18 0.005 270);
+  --foreground: oklch(0.96 0.005 270);
+  --panel: oklch(0.215 0.006 270);
+  --card: oklch(0.215 0.006 270);
+  --card-foreground: oklch(0.96 0.005 270);
+  --popover: oklch(0.215 0.006 270);
+  --popover-foreground: oklch(0.96 0.005 270);
+  --primary: oklch(0.62 0.22 290);
+  --primary-foreground: oklch(0.99 0 0);
+  --primary-glow: oklch(0.72 0.20 295);
+  --secondary: oklch(0.27 0.01 270);
+  --secondary-foreground: oklch(0.96 0.005 270);
+  --muted: oklch(0.25 0.008 270);
+  --muted-foreground: oklch(0.68 0.02 270);
+  --accent: oklch(0.30 0.05 290);
+  --accent-foreground: oklch(0.98 0.005 270);
+  --destructive: oklch(0.62 0.24 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --success: oklch(0.70 0.18 150);
+  --border: oklch(0.30 0.01 270);
+  --input: oklch(0.27 0.008 270);
+  --ring: oklch(0.62 0.22 290);
+  --sidebar: oklch(0.20 0.005 270);
+  --sidebar-foreground: oklch(0.96 0.005 270);
+  --sidebar-primary: oklch(0.62 0.22 290);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.27 0.01 270);
+  --sidebar-accent-foreground: oklch(0.96 0.005 270);
+  --sidebar-border: oklch(0.30 0.01 270);
+  --sidebar-ring: oklch(0.62 0.22 290);
+
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
+  --gradient-panel: linear-gradient(180deg, oklch(0.22 0.008 270), oklch(0.19 0.005 270));
+  --shadow-glow: 0 0 40px -10px color-mix(in oklab, var(--primary) 50%, transparent);
+  --shadow-panel: 0 4px 20px -4px oklch(0 0 0 / 0.4);
+}
+
+.dark {
+  --background: oklch(0.18 0.005 270);
+  --foreground: oklch(0.96 0.005 270);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body, #root { height: 100%; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-primary { background-image: var(--gradient-primary); }
+  .bg-gradient-panel { background-image: var(--gradient-panel); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-panel { box-shadow: var(--shadow-panel); }
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
