@@ -16,6 +16,10 @@
 - **Styling:** Tailwind CSS + Radix UI (Shadcn/UI components)
 - **Icons:** Lucide React
 - **Build Tool:** Vite
+---
+
+##🧠 The AI Strategy
+Standard AI image generation is stochastic and often loses character detail between prompts. Sprite Forge wraps user input in a "Consistency Anchor"—a set of hidden global prompts and negative constraints that force the diffusion model to prioritize the character's unique traits before applying positional logic. This creates a cohesive "Sprite Sheet" effect suitable for 2D animation.
 
 ---
 
@@ -45,5 +49,3 @@ npm run dev
 ```
 ---
 
-##🧠 The AI Strategy
-Standard AI image generation is stochastic and often loses character detail between prompts. Sprite Forge wraps user input in a "Consistency Anchor"—a set of hidden global prompts and negative constraints that force the diffusion model to prioritize the character's unique traits before applying positional logic. This creates a cohesive "Sprite Sheet" effect suitable for 2D animation.
