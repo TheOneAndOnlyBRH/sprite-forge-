@@ -32,7 +32,7 @@ Standard AI image generation is stochastic and often loses character detail betw
 ### Installation
 1. **Clone the repository:**
    ```bash
-   [https://github.com/TheOneAndOnlyBRH/sprite-forge](https://github.com/TheOneAndOnlyBRH/sprite-forge-)
+   [https://github.com/TheOneAndOnlyBRH/sprite-forge-](https://github.com/TheOneAndOnlyBRH/sprite-forge-)
 
 
 
